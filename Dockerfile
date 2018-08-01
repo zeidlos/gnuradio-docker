@@ -52,7 +52,7 @@ RUN git checkout ${gr_branch}
 RUN mkdir build && cd build
 WORKDIR /opt/gnuradio/build
 RUN cmake ../
-RUN make -j${num_threads}
+RUN make -j ${num_threads}
 RUN make install
 RUN ldconfig
 
